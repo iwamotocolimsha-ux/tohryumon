@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小松YEG登竜門｜新入会員オリエンテーション</title>
+  <meta name="description" content="小松商工会議所青年部の新入会員予定者向けオリエンテーション『小松YEG登竜門』。仲間とつながり、YEGを知り、地域で動き出すための入口です。">
+  <style>
+    :root{
+      --navy:#0F2D4A;
+      --blue:#135C8B;
+      --deep:#10263C;
+      --gold:#D8A73D;
+      --orange:#F08A24;
+      --cream:#FFF8E8;
+      --soft:#F4F7FB;
+      --mint:#E9F6F4;
+      --white:#FFFFFF;
+      --ink:#1F2933;
+      --muted:#607083;
+      --line:#DDE5EF;
+      --error:#B42318;
+      --success:#0B6B43;
+      --shadow:0 18px 50px rgba(15,45,74,.14);
+      --shadow-soft:0 10px 30px rgba(15,45,74,.10);
+      --radius:24px;
+      --radius-sm:16px;
+      --max:1180px;
+      --header:76px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      color:var(--ink);
+      font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:linear-gradient(180deg,#fff 0%,#f8fbff 42%,#fff 100%);
+      line-height:1.75;
+      overflow-x:hidden;
+    }
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      z-index:-2;
+      background:
+        radial-gradient(circle at 8% 12%, rgba(216,167,61,.18), transparent 28%),
+        radial-gradient(circle at 92% 8%, rgba(19,92,139,.12), transparent 32%),
+        radial-gradient(circle at 78% 82%, rgba(240,138,36,.10), transparent 28%);
+    }
+    a{color:inherit;text-decoration:none}
+    img,svg{max-width:100%;height:auto;display:block}
+    .container{width:min(var(--max),calc(100% - 40px));margin-inline:auto}
+    .section{padding:96px 0;position:relative}
+    .section.alt{background:linear-gradient(180deg,rgba(244,247,251,.8),rgba(255,255,255,.9))}
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:7px 12px;
+      border-radius:999px;
+      background:rgba(216,167,61,.14);
+      color:#7A5311;
+      font-weight:800;
+      font-size:.84rem;
+      letter-spacing:.08em;
+    }
+    .eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold)}
+    h1,h2,h3,p{margin:0}
+    h1{font-size:clamp(2.7rem,6vw,5.8rem);line-height:1.04;letter-spacing:-.05em;font-weight:900}
+    h2{font-size:clamp(2rem,3.5vw,3.6rem);line-height:1.16;letter-spacing:-.04em;font-weight:900;color:var(--deep)}
+    h3{font-size:1.24rem;line-height:1.4;color:var(--deep)}
+    .lead{font-size:clamp(1.05rem,1.7vw,1.28rem);color:#405166;font-weight:600}
+    .muted{color:var(--muted)}
+    .header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      height:var(--header);
+      background:rgba(255,255,255,.88);
+      border-bottom:1px solid rgba(221,229,239,.92);
+      backdrop-filter:blur(18px);
+    }
+    .header-inner{
+      height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+    }
+    .brand{display:flex;align-items:center;gap:12px;min-width:210px}
+    .brand-mark{
+      width:42px;height:42px;border-radius:15px;
+      display:grid;place-items:center;
+      color:#fff;font-weight:900;
+      background:conic-gradient(from 140deg,var(--gold),var(--orange),var(--blue),var(--navy),var(--gold));
+      box-shadow:0 10px 24px rgba(15,45,74,.22);
+      position:relative;
+      overflow:hidden;
+    }
+    .brand-mark::after{content:"";position:absolute;inset:8px;border:1px solid rgba(255,255,255,.45);border-radius:10px}
+    .brand-text strong{display:block;line-height:1.15;color:var(--deep);font-size:1rem}
+    .brand-text span{display:block;font-size:.72rem;color:var(--muted);font-weight:700;letter-spacing:.05em}
+    .nav{display:flex;align-items:center;gap:24px;font-size:.92rem;font-weight:800;color:#405166}
+    .nav a{position:relative;padding:8px 0}
+    .nav a::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:.25s}
+    .nav a:hover::after,.nav a:focus-visible::after{transform:scaleX(1)}
+    .btn{
+      appearance:none;border:0;cursor:pointer;
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      min-height:48px;padding:13px 22px;border-radius:999px;
+      font-weight:900;line-height:1.2;letter-spacing:.01em;
+      transition:transform .2s,box-shadow .2s,background .2s,border-color .2s;
+      text-align:center;
+      font-family:inherit;
+    }
+    .btn:hover{transform:translateY(-2px)}
+    .btn:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,summary:focus-visible,label:focus-within{outline:3px solid rgba(216,167,61,.45);outline-offset:3px}
+    .btn.primary{color:#fff;background:linear-gradient(135deg,var(--orange),var(--gold));box-shadow:0 14px 30px rgba(216,167,61,.35)}
+    .btn.dark{color:#fff;background:linear-gradient(135deg,var(--navy),var(--blue));box-shadow:0 14px 30px rgba(15,45,74,.24)}
+    .btn.ghost{color:var(--navy);background:#fff;border:1px solid var(--line);box-shadow:var(--shadow-soft)}
+    .btn.small{min-height:40px;padding:10px 16px;font-size:.88rem}
+    .hero{
+      min-height:calc(100vh - var(--header));
+      padding:74px 0 76px;
+      display:flex;align-items:center;
+      position:relative;overflow:hidden;
+    }
+    .hero::before{
+      content:"";position:absolute;inset:auto -10% -20% -10%;height:360px;
+      background:radial-gradient(ellipse at center,rgba(19,92,139,.12),transparent 65%);
+      pointer-events:none;
+    }
+    .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:54px;position:relative;z-index:1}
+    .hero-copy{display:grid;gap:24px}
+    .hero-title span{color:var(--blue)}
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+    .hero-note{display:flex;gap:10px;flex-wrap:wrap;color:#45576A;font-weight:800;font-size:.92rem}
+    .hero-note span{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 12px;box-shadow:0 8px 18px rgba(15,45,74,.06)}
+    .hero-note span::before{content:"✓";display:grid;place-items:center;width:18px;height:18px;border-radius:50%;background:var(--mint);color:var(--success);font-size:.75rem;font-weight:900}
+    .info-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:10px}
+    .info-item{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;box-shadow:var(--shadow-soft)}
+    .info-item small{display:block;color:var(--muted);font-weight:800;font-size:.76rem;margin-bottom:4px}.info-item strong{display:block;color:var(--deep);line-height:1.35}
+    .visual-card{position:relative;min-height:560px;border-radius:34px;padding:26px;background:linear-gradient(145deg,#fff 0%,#fff8e8 55%,#eaf6fb 100%);box-shadow:var(--shadow);overflow:hidden;border:1px solid rgba(221,229,239,.9)}
+    .visual-card::before{content:"";position:absolute;inset:-20%;background-image:linear-gradient(rgba(19,92,139,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(19,92,139,.08) 1px,transparent 1px);background-size:36px 36px;transform:rotate(-7deg);mask-image:radial-gradient(circle at 50% 45%,#000,transparent 68%)}
+    .gate{position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);width:min(72%,360px);height:380px;border-radius:190px 190px 30px 30px;border:18px solid var(--navy);border-bottom-width:28px;background:linear-gradient(180deg,rgba(255,255,255,.72),rgba(255,255,255,.28));box-shadow:inset 0 0 0 10px rgba(216,167,61,.28),0 24px 70px rgba(15,45,74,.18)}
+    .gate::before{content:"登竜門";position:absolute;top:82px;left:50%;transform:translateX(-50%);font-size:2.2rem;font-weight:900;writing-mode:vertical-rl;letter-spacing:.18em;color:var(--navy)}
+    .gate::after{content:"";position:absolute;left:50%;bottom:-58px;transform:translateX(-50%);width:210px;height:80px;background:linear-gradient(180deg,rgba(216,167,61,.85),rgba(240,138,36,.25));clip-path:polygon(50% 0,100% 100%,0 100%);filter:blur(.2px)}
+    .orbit{position:absolute;border:1px dashed rgba(19,92,139,.25);border-radius:50%}
+    .orbit.one{width:390px;height:390px;right:20px;top:34px}.orbit.two{width:260px;height:260px;left:20px;bottom:30px}.orbit.three{width:150px;height:150px;right:64px;bottom:74px}
+    .person{position:absolute;width:72px;height:72px;border-radius:24px;background:#fff;border:1px solid var(--line);box-shadow:0 12px 24px rgba(15,45,74,.12);display:grid;place-items:center;color:var(--navy);font-size:1.9rem;font-weight:900}
+    .person.p1{left:42px;top:88px}.person.p2{right:42px;top:150px}.person.p3{left:64px;bottom:100px}.person.p4{right:70px;bottom:50px}
+    .speech{position:absolute;max-width:180px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:12px 14px;box-shadow:var(--shadow-soft);font-weight:900;color:var(--deep);font-size:.86rem;line-height:1.45}
+    .speech::after{content:"";position:absolute;width:14px;height:14px;background:#fff;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transform:rotate(45deg)}
+    .speech.s1{left:28px;top:190px}.speech.s1::after{left:34px;bottom:-8px}.speech.s2{right:28px;top:270px}.speech.s2::after{right:36px;bottom:-8px}.speech.s3{left:50%;bottom:30px;transform:translateX(-50%);text-align:center}.speech.s3::after{left:50%;top:-8px;transform:translateX(-50%) rotate(225deg)}
+    .floating-badge{position:absolute;left:28px;bottom:28px;background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;border-radius:20px;padding:16px 18px;box-shadow:0 18px 40px rgba(15,45,74,.24);font-weight:900}.floating-badge strong{display:block;font-size:2rem;line-height:1}.floating-badge span{font-size:.82rem}
+    .section-head{display:grid;gap:16px;margin-bottom:36px;max-width:780px}.section-head.center{text-align:center;margin-inline:auto}.section-head .lead{max-width:720px}.section-head.center .lead{margin-inline:auto}
+    .grid{display:grid;gap:22px}.grid.cols-2{grid-template-columns:repeat(2,1fr)}.grid.cols-3{grid-template-columns:repeat(3,1fr)}.grid.cols-4{grid-template-columns:repeat(4,1fr)}
+    .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow-soft);position:relative;overflow:hidden}.card::before{content:"";position:absolute;left:0;top:0;width:100%;height:5px;background:linear-gradient(90deg,var(--gold),var(--orange),var(--blue));opacity:.86}.card p{color:#526476;margin-top:10px}.icon{width:52px;height:52px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(216,167,61,.18),rgba(19,92,139,.10));color:var(--navy);font-weight:900;font-size:1.45rem;margin-bottom:16px}.anxiety-card{cursor:pointer;min-height:210px;transition:.25s}.anxiety-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+    .about-panel{display:grid;grid-template-columns:.9fr 1.1fr;gap:32px;align-items:center;background:linear-gradient(135deg,var(--navy),#1A4F75);color:#fff;border-radius:34px;padding:42px;box-shadow:var(--shadow);position:relative;overflow:hidden}.about-panel::before{content:"";position:absolute;right:-120px;top:-140px;width:360px;height:360px;border-radius:50%;background:rgba(216,167,61,.18)}.about-panel h2{color:#fff}.about-panel .lead{color:rgba(255,255,255,.86)}
+    .step-list{display:grid;gap:14px}.step{display:grid;grid-template-columns:56px 1fr;gap:14px;align-items:start;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.16);border-radius:18px;padding:16px}.step-num{width:52px;height:52px;border-radius:17px;background:#fff;color:var(--navy);display:grid;place-items:center;font-weight:900}.step strong{display:block;color:#fff}.step span{display:block;color:rgba(255,255,255,.74);font-size:.92rem;line-height:1.55;margin-top:2px}
+    .timeline{position:relative;display:grid;gap:18px}.timeline::before{content:"";position:absolute;left:26px;top:20px;bottom:20px;width:3px;background:linear-gradient(var(--gold),var(--blue));border-radius:99px}.time-item{position:relative;display:grid;grid-template-columns:70px 1fr;gap:20px;align-items:stretch}.time-dot{width:56px;height:56px;border-radius:20px;background:#fff;border:3px solid var(--gold);box-shadow:var(--shadow-soft);display:grid;place-items:center;font-weight:900;color:var(--navy);z-index:1}.time-body{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:var(--shadow-soft)}.time-body small{display:inline-flex;color:#805A14;background:rgba(216,167,61,.14);border-radius:999px;padding:3px 10px;font-weight:900;margin-bottom:8px}.time-body p{color:#526476;margin-top:8px}
+    .program{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}.program-visual{min-height:420px;border-radius:34px;background:linear-gradient(135deg,#fff,var(--cream));border:1px solid var(--line);box-shadow:var(--shadow);position:relative;overflow:hidden}.program-visual::before{content:"";position:absolute;inset:42px;border-radius:30px;border:2px dashed rgba(19,92,139,.24)}.plan-doc{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-3deg);width:280px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 20px 50px rgba(15,45,74,.18)}.plan-doc .line{height:12px;border-radius:99px;background:#DDE5EF;margin:12px 0}.plan-doc .line.w1{width:90%;background:var(--navy)}.plan-doc .line.w2{width:65%;background:var(--gold)}.plan-doc .line.w3{width:78%}.plan-doc .mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}.plan-doc .mini-grid div{height:52px;border-radius:12px;background:var(--soft)}.award{position:absolute;right:50px;bottom:54px;width:94px;height:94px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--orange));display:grid;place-items:center;color:#fff;font-size:2rem;box-shadow:0 18px 38px rgba(216,167,61,.35)}
+    .overview{display:grid;grid-template-columns:1fr 1fr;gap:18px}.overview-item{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px}.overview-item small{display:block;font-weight:900;color:var(--muted);font-size:.78rem;margin-bottom:4px}.overview-item strong{font-size:1.04rem;color:var(--deep)}
+    .faq-list{display:grid;gap:12px}.faq{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow-soft);overflow:hidden}.faq summary{list-style:none;cursor:pointer;padding:20px 58px 20px 22px;font-weight:900;color:var(--deep);position:relative}.faq summary::-webkit-details-marker{display:none}.faq summary::after{content:"＋";position:absolute;right:22px;top:50%;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--soft);color:var(--navy)}.faq[open] summary::after{content:"−";background:var(--navy);color:#fff}.faq p{padding:0 22px 22px;color:#526476}
+    .form-wrap{display:grid;grid-template-columns:.86fr 1.14fr;gap:30px;align-items:start}.form-side{position:sticky;top:100px;background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;border-radius:30px;padding:34px;box-shadow:var(--shadow);overflow:hidden}.form-side::after{content:"";position:absolute;right:-80px;bottom:-100px;width:240px;height:240px;border-radius:50%;background:rgba(216,167,61,.24)}.form-side h2{color:#fff}.form-side p{color:rgba(255,255,255,.82);margin-top:16px}.form-side ul{margin:22px 0 0;padding:0;list-style:none;display:grid;gap:12px}.form-side li{display:flex;gap:10px;align-items:flex-start;color:rgba(255,255,255,.88);font-weight:700}.form-side li::before{content:"✓";flex:0 0 22px;width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.16);display:grid;place-items:center;color:#fff;font-size:.78rem;margin-top:2px}
+    form{background:#fff;border:1px solid var(--line);border-radius:30px;padding:30px;box-shadow:var(--shadow)}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.field{display:grid;gap:8px}.field.full{grid-column:1/-1}.label-row{display:flex;align-items:center;justify-content:space-between;gap:12px}.label-row label,.field>label{font-weight:900;color:var(--deep)}.req,.opt{font-size:.74rem;border-radius:999px;padding:3px 8px;font-weight:900}.req{background:#FFF1F0;color:var(--error)}.opt{background:var(--soft);color:var(--muted)}input,select,textarea{width:100%;border:1px solid #C9D4E3;border-radius:14px;padding:13px 14px;font:inherit;color:var(--ink);background:#fff;min-height:48px}textarea{min-height:116px;resize:vertical}.checks{display:grid;gap:10px}.radio-row,.check-row{display:flex;align-items:flex-start;gap:10px;border:1px solid var(--line);border-radius:14px;padding:13px 14px;background:#fff;cursor:pointer;min-height:48px}.radio-row input,.check-row input{width:auto;min-height:auto;margin-top:5px}.radio-row:has(input:checked),.check-row:has(input:checked){border-color:var(--gold);background:#FFF9EB;box-shadow:0 0 0 3px rgba(216,167,61,.14)}.error-text{display:none;color:var(--error);font-size:.84rem;font-weight:800}.field.invalid .error-text{display:block}.field.invalid input,.field.invalid select,.field.invalid textarea{border-color:var(--error);box-shadow:0 0 0 3px rgba(180,35,24,.10)}.privacy{background:var(--soft);border-radius:18px;padding:16px}.success{display:none;background:linear-gradient(135deg,#EAF8F1,#FFFFFF);border:1px solid #A7E2C1;border-radius:24px;padding:28px;box-shadow:var(--shadow-soft);color:var(--success)}.success.show{display:block}.success strong{display:block;font-size:1.4rem;line-height:1.4;margin-bottom:8px}.form-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:24px}.form-actions small{color:var(--muted);font-weight:700}
+    .final-cta{background:linear-gradient(135deg,var(--navy),#143D61 60%,var(--blue));color:#fff;border-radius:38px;padding:54px;box-shadow:var(--shadow);position:relative;overflow:hidden}.final-cta::before{content:"";position:absolute;inset:-30%;background:radial-gradient(circle at 20% 35%,rgba(216,167,61,.32),transparent 24%),radial-gradient(circle at 80% 60%,rgba(255,255,255,.14),transparent 30%);}.final-cta-inner{position:relative;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}.final-cta h2{color:#fff}.final-cta p{color:rgba(255,255,255,.84);margin-top:14px;font-size:1.08rem}.footer{padding:44px 0 92px;background:#081D30;color:rgba(255,255,255,.76)}.footer-grid{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center}.footer strong{display:block;color:#fff}.footer a{text-decoration:underline;text-underline-offset:4px}.mobile-cta{display:none;position:fixed;left:12px;right:12px;bottom:12px;z-index:60}.mobile-cta .btn{width:100%;min-height:54px;border-radius:18px}
+    .reveal{opacity:0;transform:translateY(22px);transition:.7s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+    @media (max-width:980px){
+      :root{--header:68px}.nav{display:none}.header-inner{gap:12px}.brand{min-width:0}.brand-text span{display:none}.hero{padding:46px 0 64px}.hero-grid,.about-panel,.program,.form-wrap,.final-cta-inner{grid-template-columns:1fr}.visual-card{min-height:440px;order:-1}.info-strip{grid-template-columns:repeat(2,1fr)}.grid.cols-3,.grid.cols-4{grid-template-columns:repeat(2,1fr)}.form-side{position:relative;top:auto}.final-cta{text-align:center}.footer-grid{grid-template-columns:1fr}.mobile-cta{display:block}body{padding-bottom:72px}.form-grid{grid-template-columns:1fr}.section{padding:76px 0}.overview{grid-template-columns:1fr}.hero-actions .btn{flex:1 1 220px}.container{width:min(var(--max),calc(100% - 28px))}
+    }
+    @media (max-width:640px){
+      .header .btn{padding:10px 12px;font-size:.78rem;min-height:42px}.brand-mark{width:36px;height:36px;border-radius:12px}.brand-text strong{font-size:.9rem}.hero-title{font-size:clamp(2.55rem,14vw,4rem)}.visual-card{min-height:360px;border-radius:24px;padding:18px}.gate{width:70%;height:280px;border-width:12px;border-bottom-width:22px}.gate::before{font-size:1.7rem;top:58px}.person{width:54px;height:54px;border-radius:18px;font-size:1.35rem}.person.p1{left:22px;top:58px}.person.p2{right:18px;top:108px}.person.p3{left:34px;bottom:80px}.person.p4{right:42px;bottom:50px}.speech{display:none}.floating-badge{left:18px;bottom:18px;padding:12px 14px}.floating-badge strong{font-size:1.5rem}.info-strip,.grid.cols-2,.grid.cols-3,.grid.cols-4{grid-template-columns:1fr}.section{padding:64px 0}.card{padding:22px;border-radius:20px}.about-panel{padding:28px;border-radius:24px}.timeline::before{left:20px}.time-item{grid-template-columns:52px 1fr;gap:14px}.time-dot{width:42px;height:42px;border-radius:14px}.program-visual{min-height:330px}.plan-doc{width:230px}.award{right:28px;bottom:34px;width:70px;height:70px}.form-wrap{gap:22px}form{padding:22px;border-radius:24px}.form-side{padding:26px;border-radius:24px}.final-cta{padding:34px 22px;border-radius:28px}.overview-item strong{font-size:.98rem}
+    }
+  </style>
+</head>
+<body>
+  <header class="header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="小松YEG登竜門 トップへ戻る">
+        <span class="brand-mark">龍</span>
+        <span class="brand-text"><strong>小松YEG登竜門</strong><span>新入会員オリエンテーション</span></span>
+      </a>
+      <nav class="nav" aria-label="ページ内ナビゲーション">
+        <a href="#about">登竜門とは</a>
+        <a href="#curriculum">流れ</a>
+        <a href="#support">サポート</a>
+        <a href="#entry">参加希望</a>
+      </nav>
+      <a class="btn primary small" href="#entry">参加希望を送る</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">小松商工会議所青年部｜新入会員予定者向け</span>
+          <h1 class="hero-title" id="hero-title">小松で、<br><span>仲間と挑戦する</span><br>入口へ。</h1>
+          <p class="lead">小松YEG登竜門は、新入会員予定者が安心して活動に参加し、仲間とつながり、自分らしい一歩を踏み出すための実践型オリエンテーションです。</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#entry">登竜門に参加希望を送る</a>
+            <a class="btn ghost" href="#curriculum">登竜門の流れを見る</a>
+          </div>
+          <div class="hero-note" aria-label="安心ポイント">
+            <span>入会前・入会直後も対象</span>
+            <span>一人参加歓迎</span>
+            <span>欠席時はアーカイブ視聴でフォロー</span>
+          </div>
+          <div class="info-strip" aria-label="開催概要">
+            <div class="info-item"><small>事業名</small><strong>小松YEG登竜門</strong></div>
+            <div class="info-item"><small>対象</small><strong>新入会員予定者・新入会員</strong></div>
+            <div class="info-item"><small>キックオフ</small><strong>令和8年10月3日<br>受付開始19:00</strong></div>
+            <div class="info-item"><small>会場</small><strong>EATLAB ほか</strong></div>
+          </div>
+        </div>
+        <div class="visual-card reveal" aria-hidden="true">
+          <div class="orbit one"></div><div class="orbit two"></div><div class="orbit three"></div>
+          <div class="gate"></div>
+          <div class="person p1">話</div><div class="person p2">学</div><div class="person p3">繋</div><div class="person p4">挑</div>
+          <div class="speech s1">最初の一歩を<br>一緒に。</div>
+          <div class="speech s2">YEGの意味が<br>分かる。</div>
+          <div class="speech s3">仲間になり、動き出す。</div>
+          <div class="floating-badge"><strong>10名</strong><span>新入会員目標</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="worry">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow">不安を安心へ</span>
+          <h2>YEGに興味はある。<br>でも、少し不安もある。</h2>
+          <p class="lead">最初は誰でも分からないことがあります。登竜門は、その不安を一つずつほどくための入口です。</p>
+        </div>
+        <div class="grid cols-4">
+          <article class="card anxiety-card reveal" data-focus="仲間づくり">
+            <div class="icon">人</div>
+            <h3>知り合いがいない</h3>
+            <p>同期や既存会員と自然につながれる設計です。最初の一人参加も歓迎します。</p>
+          </article>
+          <article class="card anxiety-card reveal" data-focus="YEG理解">
+            <div class="icon">灯</div>
+            <h3>何をする団体か分からない</h3>
+            <p>YEGWAYや小松YEGの方向性を、最初から分かりやすく学びます。</p>
+          </article>
+          <article class="card anxiety-card reveal" data-focus="参加ペース">
+            <div class="icon">時</div>
+            <h3>忙しくて参加できるか不安</h3>
+            <p>欠席時もアーカイブ視聴でフォローできるようにします。</p>
+          </article>
+          <article class="card anxiety-card reveal" data-focus="仕事への活用">
+            <div class="icon">伸</div>
+            <h3>自分に役立つか分からない</h3>
+            <p>仲間づくり、企画力、地域との接点を実践的に得られます。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="about-panel reveal">
+          <div>
+            <span class="eyebrow">ABOUT</span>
+            <h2>入会後の一歩を支える、<br>実践型オリエンテーション。</h2>
+            <p class="lead">入会して終わりではなく、仲間になり、学び、動き出すまでを小松YEGが支えます。</p>
+          </div>
+          <div class="step-list" aria-label="登竜門で行うこと">
+            <div class="step"><div class="step-num">1</div><div><strong>YEGを知る</strong><span>YEGWAY、日本YEG、県連、ブロック、小松YEGの役割を理解します。</span></div></div>
+            <div class="step"><div class="step-num">2</div><div><strong>仲間とつながる</strong><span>自己紹介、講義、交流を通じて、同期と既存会員との接点をつくります。</span></div></div>
+            <div class="step"><div class="step-num">3</div><div><strong>企画を体験する</strong><span>疑似事業計画の作成を通じて、共有・共感・実践・成果までを体験します。</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="values">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">VALUE</span>
+          <h2>登竜門で得られる<br>3つのこと。</h2>
+        </div>
+        <div class="grid cols-3">
+          <article class="card reveal">
+            <div class="icon">仲</div>
+            <h3>仲間ができる</h3>
+            <p>同期、既存会員、委員会メンバーとつながるきっかけになります。YEG活動の入口で、一人にしません。</p>
+          </article>
+          <article class="card reveal">
+            <div class="icon">理</div>
+            <h3>YEGが分かる</h3>
+            <p>YEGWAY、小松YEGの方向性、組織の役割を理解し、何のために所属するのかを言語化します。</p>
+          </article>
+          <article class="card reveal">
+            <div class="icon">実</div>
+            <h3>実践できる</h3>
+            <p>疑似事業計画を通じて、例会や事業をつくる考え方を体験し、活動参加への不安を減らします。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="curriculum">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow">CURRICULUM</span>
+          <h2>約半年かけて、<br>少しずつYEGを知る。</h2>
+          <p class="lead">講義だけで終わらず、交流と実践を重ねながら、次の一歩へ進みます。</p>
+        </div>
+        <div class="timeline">
+          <article class="time-item reveal"><div class="time-dot">0</div><div class="time-body"><small>令和8年10月3日｜受付開始19:00</small><h3>キックオフ・事前オリエンテーション</h3><p>EATLABを会場に、登竜門の入口として参加者同士の関係づくりを始めます。</p></div></article>
+          <article class="time-item reveal"><div class="time-dot">1</div><div class="time-body"><small>10月22日（木）｜第1回</small><h3>まずは自分と仲間を知る</h3><p>入会目的の再確認、小松YEGの方向性、バッチ授与、自己紹介スピーチ、講義を行います。</p></div></article>
+          <article class="time-item reveal"><div class="time-dot">2</div><div class="time-body"><small>11月19日（木）｜第2回</small><h3>YEG全体のつながりを知る</h3><p>YEGWAY、日本YEG、県連、ブロック組織の目的を理解します。</p></div></article>
+          <article class="time-item reveal"><div class="time-dot">3</div><div class="time-body"><small>12月17日（木）｜第3回</small><h3>小松YEGで何ができるかを知る</h3><p>小松YEGのヴィジョン、活動紹介、委員会紹介を通じて、参加イメージを具体化します。</p></div></article>
+          <article class="time-item reveal"><div class="time-dot">4</div><div class="time-body"><small>1月21日（木）｜第4回</small><h3>活動に必要な道具を知る</h3><p>会員サポート、ポータル、SNS、Zoomなど、YEG活動に必要な情報環境を学びます。</p></div></article>
+          <article class="time-item reveal"><div class="time-dot">5</div><div class="time-body"><small>3月25日（木）｜第5回・卒業式</small><h3>学びを形にし、次の一歩へ進む</h3><p>結果発表、表彰式、卒業式を通じて、登竜門での学びを次の活動へつなげます。</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="support">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">SUPPORT</span>
+          <h2>一人にしない仕組みがあります。</h2>
+          <p class="lead">分からないことがある前提で、既存会員・メンター・委員会が伴走します。</p>
+        </div>
+        <div class="grid cols-3">
+          <article class="card reveal"><div class="icon">伴</div><h3>メンターが支える</h3><p>疑似事業計画や発表に向けて、既存会員がチームの相談役として伴走します。</p></article>
+          <article class="card reveal"><div class="icon">録</div><h3>欠席時もフォロー</h3><p>Zoom録画によるアーカイブ視聴を用意し、参加できない回があっても追いつける設計です。</p></article>
+          <article class="card reveal"><div class="icon">委</div><h3>委員会とつながる</h3><p>小松YEGの各委員会紹介を通じて、自分が関われる場所を見つけます。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="practice">
+      <div class="container program">
+        <div class="reveal">
+          <span class="eyebrow">PRACTICE</span>
+          <h2>学ぶだけでなく、<br>企画をつくる。</h2>
+          <p class="lead" style="margin-top:16px">疑似事業計画書の作成を通じて、YEGの事業がどのように生まれ、共有され、実践され、成果につながるのかを体験します。</p>
+          <div class="grid" style="margin-top:24px">
+            <article class="card"><h3>共有 → 共感 → 実践 → 成果</h3><p>アイデアを出すだけでなく、仲間と整理し、形にし、発表まで進めます。</p></article>
+            <article class="card"><h3>優秀賞の表彰</h3><p>最後の卒業式では、取り組みの成果を発表し、優秀な企画を表彰します。</p></article>
+          </div>
+        </div>
+        <div class="program-visual reveal" aria-hidden="true">
+          <div class="plan-doc">
+            <strong style="color:var(--deep);font-size:1.25rem">疑似事業計画書</strong>
+            <div class="line w1"></div><div class="line w2"></div><div class="line w3"></div>
+            <div class="mini-grid"><div></div><div></div><div></div><div></div></div>
+          </div>
+          <div class="award">賞</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="target">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow">TARGET</span>
+          <h2>こんな方に参加してほしい。</h2>
+        </div>
+        <div class="grid cols-4">
+          <article class="card reveal"><h3>入会を検討している方</h3><p>入会前に雰囲気や活動内容を知る機会になります。</p></article>
+          <article class="card reveal"><h3>入会予定・入会直後の方</h3><p>最初の不安を減らし、活動に参加しやすくなります。</p></article>
+          <article class="card reveal"><h3>若手経営者・後継者</h3><p>地域や企業の成長につながる仲間ができます。</p></article>
+          <article class="card reveal"><h3>既存会員とつながりたい方</h3><p>委員会や例会に参加するきっかけになります。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="overview">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">OVERVIEW</span>
+          <h2>開催概要</h2>
+        </div>
+        <div class="overview reveal">
+          <div class="overview-item"><small>事業名</small><strong>小松YEG登竜門（新入会員オリエンテーション）</strong></div>
+          <div class="overview-item"><small>担当委員会</small><strong>会員交流（登竜門）委員会</strong></div>
+          <div class="overview-item"><small>動員目標</small><strong>新入会員・予定者10名、熱意ある既存会員、アンバサダー会員</strong></div>
+          <div class="overview-item"><small>形式</small><strong>スクール形式及び実践形式</strong></div>
+          <div class="overview-item"><small>会場</small><strong>〒923-0801 石川県小松市園町ハ96-1 T-Place 1F EATLAB ほか</strong></div>
+          <div class="overview-item"><small>スローガン</small><strong>Power to the KOMATSU<br>〜これまでとこれからを未来の小松に〜</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="faq">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2>よくある不安に<br>お答えします。</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq reveal"><summary>まだ入会前でも参加できますか？</summary><p>はい。新入会員予定者・入会検討中の方も対象です。まずは雰囲気や活動内容を知る機会としてご参加ください。</p></details>
+          <details class="faq reveal"><summary>一人で参加しても大丈夫ですか？</summary><p>大丈夫です。多くの方が最初は一人で参加します。自己紹介や交流の時間を設け、自然につながれるように進行します。</p></details>
+          <details class="faq reveal"><summary>途中から参加できますか？</summary><p>可能な範囲でフォローします。欠席した回はアーカイブ視聴で補えるようにします。</p></details>
+          <details class="faq reveal"><summary>毎回参加できないといけませんか？</summary><p>できるだけ参加を推奨しますが、仕事の都合も想定しています。欠席時のフォローもありますのでご相談ください。</p></details>
+          <details class="faq reveal"><summary>何を準備すればよいですか？</summary><p>特別な準備は不要です。最初は自己紹介できる程度で大丈夫です。</p></details>
+          <details class="faq reveal"><summary>仕事に役立ちますか？</summary><p>企画力、発信力、人脈、地域理解につながります。自社や地域活動に活かせる視点を得られます。</p></details>
+          <details class="faq reveal"><summary>服装はどうすればよいですか？</summary><p>ビジネスカジュアルを推奨します。迷う場合は、普段の仕事に近い服装で問題ありません。</p></details>
+          <details class="faq reveal"><summary>参加費はありますか？</summary><p>詳細案内時にお伝えします。未確定の内容は、担当者より改めてご案内します。</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="entry">
+      <div class="container form-wrap">
+        <aside class="form-side reveal">
+          <span class="eyebrow">ENTRY</span>
+          <h2>まずは、参加希望を送る。</h2>
+          <p>このフォームは、登竜門への参加希望・説明希望を確認するためのものです。正式な入会手続きや詳細案内は、担当者より改めてご連絡します。</p>
+          <ul>
+            <li>入会前でも送信できます。</li>
+            <li>検討中・説明希望でも大丈夫です。</li>
+            <li>不安なことも自由に書けます。</li>
+          </ul>
+        </aside>
+        <div class="reveal">
+          <form id="entry-form" novalidate>
+            <div class="form-grid">
+              <div class="field" data-required="true"><div class="label-row"><label for="name">氏名</label><span class="req">必須</span></div><input id="name" name="name" type="text" autocomplete="name"><span class="error-text">氏名を入力してください。</span></div>
+              <div class="field" data-required="true"><div class="label-row"><label for="company">会社名・屋号</label><span class="req">必須</span></div><input id="company" name="company" type="text" autocomplete="organization"><span class="error-text">会社名・屋号を入力してください。</span></div>
+              <div class="field"><div class="label-row"><label for="position">役職・立場</label><span class="opt">任意</span></div><input id="position" name="position" type="text" placeholder="例：代表、後継者、社員など"></div>
+              <div class="field" data-required="true"><div class="label-row"><label for="phone">電話番号</label><span class="req">必須</span></div><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel"><span class="error-text">電話番号を入力してください。</span></div>
+              <div class="field full" data-required="true" data-email="true"><div class="label-row"><label for="email">メールアドレス</label><span class="req">必須</span></div><input id="email" name="email" type="email" autocomplete="email"><span class="error-text">正しいメールアドレスを入力してください。</span></div>
+              <div class="field full" data-required="radio" data-name="intent"><div class="label-row"><label>参加意向</label><span class="req">必須</span></div><div class="checks"><label class="radio-row"><input type="radio" name="intent" value="参加したい">参加したい</label><label class="radio-row"><input type="radio" name="intent" value="説明を聞きたい">説明を聞きたい</label><label class="radio-row"><input type="radio" name="intent" value="検討中">検討中</label></div><span class="error-text">参加意向を選択してください。</span></div>
+              <div class="field full" data-required="radio" data-name="status"><div class="label-row"><label>YEGへの状況</label><span class="req">必須</span></div><div class="checks"><label class="radio-row"><input type="radio" name="status" value="入会予定">入会予定</label><label class="radio-row"><input type="radio" name="status" value="入会検討中">入会検討中</label><label class="radio-row"><input type="radio" name="status" value="紹介を受けた">紹介を受けた</label><label class="radio-row"><input type="radio" name="status" value="その他">その他</label></div><span class="error-text">YEGへの状況を選択してください。</span></div>
+              <div class="field full"><div class="label-row"><label>不安なこと</label><span class="opt">任意</span></div><div class="checks"><label class="check-row"><input type="checkbox" name="worry" value="知り合いがいない">知り合いがいない</label><label class="check-row"><input type="checkbox" name="worry" value="活動内容が分からない">活動内容が分からない</label><label class="check-row"><input type="checkbox" name="worry" value="仕事との両立が不安">仕事との両立が不安</label><label class="check-row"><input type="checkbox" name="worry" value="自分に合うか分からない">自分に合うか分からない</label></div></div>
+              <div class="field full"><div class="label-row"><label for="message">質問・相談</label><span class="opt">任意</span></div><textarea id="message" name="message" placeholder="例：参加頻度、活動内容、入会までの流れなど、気になることを自由にお書きください。"></textarea></div>
+              <div class="field full privacy" data-required="checkbox" data-name="agree"><label class="check-row"><input type="checkbox" name="agree" value="同意">個人情報の取り扱いに同意します。</label><span class="error-text">同意が必要です。</span></div>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn primary">参加希望を送る</button>
+              <small>送信後、担当者より改めてご連絡します。</small>
+            </div>
+          </form>
+          <div id="success-message" class="success" role="status" aria-live="polite">
+            <strong>声を受け付けました。ご協力ありがとうございます。</strong>
+            <p>参加希望を受け付けました。登竜門の詳細や今後の流れについて、担当者より改めてご案内します。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="final-cta reveal">
+          <div class="final-cta-inner">
+            <div>
+              <h2>小松で、仲間と動き出そう。</h2>
+              <p>最初の一歩は、少し不安でも大丈夫です。登竜門は、あなたが小松YEGの仲間として安心して参加し、成長していくための入口です。</p>
+            </div>
+            <a class="btn primary" href="#entry">登竜門に参加希望を送る</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>小松YEG登竜門</strong>
+        <span>小松商工会議所青年部｜会員交流（登竜門）委員会</span>
+      </div>
+      <div>
+        <a href="#top">ページ上部へ戻る</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-cta" aria-hidden="false"><a class="btn primary" href="#entry">参加希望を送る</a></div>
+
+  <script>
+    (function(){
+      const revealItems = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver((entries)=>{
+        entries.forEach(entry=>{
+          if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}
+        });
+      },{threshold:.12});
+      revealItems.forEach(item=>observer.observe(item));
+
+      document.querySelectorAll('.anxiety-card').forEach(card=>{
+        card.addEventListener('click',()=>{
+          const value = card.getAttribute('data-focus') || '';
+          const textarea = document.getElementById('message');
+          if(textarea && value){
+            textarea.value = textarea.value ? textarea.value : value + 'について詳しく知りたいです。';
+          }
+          document.getElementById('entry').scrollIntoView({behavior:'smooth',block:'start'});
+        });
+      });
+
+      document.querySelectorAll('.faq').forEach((item)=>{
+        item.addEventListener('toggle',()=>{
+          if(item.open){
+            document.querySelectorAll('.faq').forEach(other=>{if(other!==item) other.open=false;});
+          }
+        });
+      });
+
+      const form = document.getElementById('entry-form');
+      const success = document.getElementById('success-message');
+      function setInvalid(field, invalid){
+        if(invalid){field.classList.add('invalid');}
+        else{field.classList.remove('invalid');}
+      }
+      function validateField(field){
+        const type = field.getAttribute('data-required');
+        const name = field.getAttribute('data-name');
+        const input = field.querySelector('input,select,textarea');
+        let invalid = false;
+        if(type === 'true'){
+          invalid = !input || !input.value.trim();
+          if(!invalid && field.getAttribute('data-email') === 'true'){
+            invalid = !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim());
+          }
+        } else if(type === 'radio'){
+          invalid = !form.querySelector('input[name="'+ name +'"]:checked');
+        } else if(type === 'checkbox'){
+          invalid = !form.querySelector('input[name="'+ name +'"]:checked');
+        }
+        setInvalid(field, invalid);
+        return !invalid;
+      }
+      if(form){
+        form.addEventListener('submit',(e)=>{
+          e.preventDefault();
+          const fields = Array.from(form.querySelectorAll('.field[data-required]'));
+          const ok = fields.map(validateField).every(Boolean);
+          if(!ok){
+            const first = form.querySelector('.field.invalid');
+            if(first){first.scrollIntoView({behavior:'smooth',block:'center'});}
+            return;
+          }
+          form.style.display = 'none';
+          success.classList.add('show');
+          success.scrollIntoView({behavior:'smooth',block:'center'});
+        });
+        form.querySelectorAll('input,select,textarea').forEach(el=>{
+          el.addEventListener('input',()=>{
+            const field = el.closest('.field');
+            if(field && field.classList.contains('invalid')) validateField(field);
+          });
+          el.addEventListener('change',()=>{
+            const field = el.closest('.field');
+            if(field && field.classList.contains('invalid')) validateField(field);
+          });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
