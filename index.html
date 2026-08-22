@@ -7,6 +7,20 @@
   <title>小松YEG登竜門｜新入会員オリエンテーション</title>
   <meta name="description" content="小松商工会議所青年部の新入会員予定者向けオリエンテーション『小松YEG登竜門』。仲間とつながり、YEGを知り、地域で動き出すための入口です。">
   <style>
+    .qr-image-wrap {
+  padding: 12px;
+  background: #fff;
+  display: grid;
+  place-items: center;
+}
+
+.qr-image-wrap img {
+  width: 100%;
+  max-width: 180px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  display: block;
+}
     :root{
       --navy:#0F2D4A;
       --blue:#135C8B;
@@ -225,7 +239,7 @@
       <div class="container hero-grid">
         <div class="hero-copy reveal">
           <span class="eyebrow">小松商工会議所青年部｜新入会員予定者向け</span>
-          <h1 class="hero-title" id="hero-title">小松で、<br><span>仲間と挑戦する</span><br>入口へ。</h1>
+          <h1 class="hero-title" id="hero-title">小松で、<br><span>仲間と挑戦する</span>入口へ。</h1>
           <p class="lead">小松YEG登竜門は、新入会員予定者が安心して活動に参加し、仲間とつながり、自分らしい一歩を踏み出すための実践型オリエンテーションです。</p>
           <div class="hero-actions">
             <a class="btn primary" href="#entry">登竜門に参加希望を送る</a>
@@ -489,11 +503,12 @@
             <div class="google-card">
               <div>
                 <h3>小松YEG登竜門 参加希望フォーム</h3>
-                <p>氏名、会社名、連絡先、参加意向、不安なことを入力してください。</p>
+                <p>氏名、会社名、連絡先を入力してください。</p>
               </div>
-              <div class="qr-placeholder">QRコード<br>設置枠</div>
+<div class="qr-placeholder qr-image-wrap">
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANgAAADYAQMAAACz7r+uAAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABXUlEQVRYhe2XQa7DIAxEzYpjcNOQ3pRjsIr/jA2Nqt9lF7OIFakpj4WxxoNj9sQTP4vqiKv6aVZ8HHV0Lgw9xp8jXvvky7EX1ViP1Asyn1w4Ko4ky/xF0M46xJnPdoJ9PYMGY30ze2uv+UUvGix7jLLI53//SbAVyL5d1naVTY5RDdABlgD8YtFvTQix0IGFauGteCBlU2Q8QHrrW7V9mhxbLoADhIJxpPsMSswaOipdADhsCyI2QYbuAuiTtpUV79sLlBjLzaZahfYzbgU5Fkvo/3Nfq9hXtnaFWFiVz6UJ6nhtUmOhAJbbKQ7Y1mwuyGr46eSOnKHLXKOqFgtvLeFTqDVv1m21Yox/ehpWVJwjiyJbFX87QkxXQ47tpHu4VbnnfjXGdI99P4U4RFn3tNecoljoLsu2I7DNouiqbE1UcIGyRmo5ZmFbPZf2l54e+/jGy+mkCLInnvhJ/AGx7xN0Ztal1QAAAABJRU5ErkJggg==" alt="小松YEG登竜門 参加希望フォームQRコード">
+</div>
               <a class="btn primary" href="#" data-google-form>Googleフォームを開く</a>
-              <p class="google-note">GoogleフォームURLが確定したら、HTML下部の <strong>GOOGLE_FORM_URL</strong> に設定してください。</p>
             </div>
           </div>
         </div>
@@ -534,7 +549,7 @@
       const GOOGLE_FORM_URL = "";
       document.querySelectorAll('[data-google-form]').forEach(function(link){
         if(GOOGLE_FORM_URL){
-          link.href = GOOGLE_FORM_URL;
+          link.href = https://forms.gle/zPLQD5ipjdoUkP3x5;
           link.target = "_blank";
           link.rel = "noopener";
         }else{
