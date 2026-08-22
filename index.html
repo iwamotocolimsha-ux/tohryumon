@@ -34,6 +34,7 @@
       --header:76px;
     }
     *{box-sizing:border-box}
+    .top-anchor{position:absolute;top:0;left:0;width:1px;height:1px}
     html{scroll-behavior:smooth}
     body{
       margin:0;
@@ -211,7 +212,7 @@
       object-fit: contain;
       display: block;
     }
-    .google-note{background:var(--soft);border-radius:18px;padding:14px;color:#526476;font-weight:700;font-size:.92rem}
+    .google-note{background:var(--soft);border-radius:18px;padding:14px;color:#000 !important;font-weight:700;font-size:.92rem}
 
     @media (max-width:980px){
       :root{--header:68px}.nav{display:none}.header-inner{gap:12px}.brand{min-width:0}.brand-text span{display:none}.hero{padding:46px 0 64px}.hero-grid,.about-panel,.program,.form-wrap,.final-cta-inner,.speaker-grid,.google-banner-inner{grid-template-columns:1fr}.visual-card{min-height:440px;order:-1}.info-strip{grid-template-columns:repeat(2,1fr)}.grid.cols-3,.grid.cols-4{grid-template-columns:repeat(2,1fr)}.google-points{grid-template-columns:1fr}.form-side{position:relative;top:auto}.final-cta{text-align:center}.footer-grid{grid-template-columns:1fr}.mobile-cta{display:block}body{padding-bottom:72px}.form-grid{grid-template-columns:1fr}.section{padding:76px 0}.overview{grid-template-columns:1fr}.hero-actions .btn{flex:1 1 220px}.container{width:min(var(--max),calc(100% - 28px))}
@@ -219,13 +220,11 @@
     @media (max-width:640px){
       .header .btn{padding:10px 12px;font-size:.78rem;min-height:42px}.brand-mark{width:38px;height:38px;border-radius:12px}.brand-text strong{font-size:.9rem}.hero-title{font-size:clamp(2.55rem,14vw,4rem)}.visual-card{min-height:360px;border-radius:24px;padding:18px}.gate{width:70%;height:280px;border-width:12px;border-bottom-width:22px}.gate::before{font-size:1.7rem;top:58px}.person{width:54px;height:54px;border-radius:18px;font-size:1.35rem}.person.p1{left:22px;top:58px}.person.p2{right:18px;top:108px}.person.p3{left:34px;bottom:80px}.person.p4{right:42px;bottom:50px}.speech{display:none}.floating-badge{left:18px;bottom:18px;padding:12px 14px}.floating-badge strong{font-size:1.5rem}.info-strip,.grid.cols-2,.grid.cols-3,.grid.cols-4{grid-template-columns:1fr}.section{padding:64px 0}.card{padding:22px;border-radius:20px}.about-panel{padding:28px;border-radius:24px}.timeline::before{left:20px}.time-item{grid-template-columns:52px 1fr;gap:14px}.time-dot{width:42px;height:42px;border-radius:14px}.program-visual{min-height:330px}.plan-doc{width:230px}.award{right:28px;bottom:34px;width:70px;height:70px}.form-wrap{gap:22px}form{padding:22px;border-radius:24px}.form-side{padding:26px;border-radius:24px}.speaker-body{padding:22px}.google-banner-inner{padding:26px}.google-card{padding:22px}.final-cta{padding:34px 22px;border-radius:28px}.overview-item strong{font-size:.98rem}
     }
-.google-note {
-  color: #000 !important;
-}
   </style>
 </head>
 <body>
-  <header class="header" id="top">
+  <div id="top" class="top-anchor" aria-hidden="true"></div>
+  <header class="header">
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="小松YEG登竜門 トップへ戻る">
         <span class="brand-mark" aria-hidden="true"><img src="data:image/png;base64,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" alt="小松YEG ロゴ"></span>
@@ -272,7 +271,6 @@
           <div class="speech s1">最初の一歩を<br>一緒に。</div>
           <div class="speech s2">YEGの意味が<br>分かる。</div>
           <div class="speech s3">仲間になり、動き出す。</div>
-          <div class="floating-badge"><strong>10名</strong><span>新入会員目標</span></div>
         </div>
       </div>
     </section>
@@ -467,7 +465,7 @@
         <div class="overview reveal">
           <div class="overview-item"><small>事業名</small><strong>小松YEG登竜門（新入会員オリエンテーション）</strong></div>
           <div class="overview-item"><small>担当委員会</small><strong>会員交流（登竜門）委員会</strong></div>
-          <div class="overview-item"><small>動員目標</small><strong>新入会員・予定者10名、熱意ある既存会員、アンバサダー会員</strong></div>
+          <div class="overview-item"><small>対象者</small><strong>新入会員・予定者、熱意ある既存会員、アンバサダー会員</strong></div>
           <div class="overview-item"><small>形式</small><strong>スクール形式及び実践形式</strong></div>
           <div class="overview-item"><small>会場</small><strong>〒923-0801 石川県小松市園町ハ96-1 T-Place 1F EATLAB ほか</strong></div>
           <div class="overview-item"><small>スローガン</small><strong>Power to the KOMATSU<br>〜これまでとこれからを未来の小松に〜</strong></div>
@@ -511,7 +509,7 @@
             <div class="google-card">
               <div>
                 <h3>小松YEG登竜門 参加希望フォーム</h3>
-                <p>氏名、会社名、連絡先を入力してください。</p>
+                <p>氏名、会社名、連絡先、参加意向、不安なことを入力してください。</p>
               </div>
               <div class="qr-placeholder qr-image-wrap">
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANgAAADYAQMAAACz7r+uAAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABXUlEQVRYhe2XQa7DIAxEzYpjcNOQ3pRjsIr/jA2Nqt9lF7OIFakpj4WxxoNj9sQTP4vqiKv6aVZ8HHV0Lgw9xp8jXvvky7EX1ViP1Asyn1w4Ko4ky/xF0M46xJnPdoJ9PYMGY30ze2uv+UUvGix7jLLI53//SbAVyL5d1naVTY5RDdABlgD8YtFvTQix0IGFauGteCBlU2Q8QHrrW7V9mhxbLoADhIJxpPsMSswaOipdADhsCyI2QYbuAuiTtpUV79sLlBjLzaZahfYzbgU5Fkvo/3Nfq9hXtnaFWFiVz6UJ6nhtUmOhAJbbKQ7Y1mwuyGr46eSOnKHLXKOqFgtvLeFTqDVv1m21Yox/ehpWVJwjiyJbFX87QkxXQ47tpHu4VbnnfjXGdI99P4U4RFn3tNecoljoLsu2I7DNouiqbE1UcIGyRmo5ZmFbPZf2l54e+/jGy+mkCLInnvhJ/AGx7xN0Ztal1QAAAABJRU5ErkJggg==" alt="小松YEG登竜門 参加希望フォームQRコード">
@@ -567,6 +565,15 @@
             alert('GoogleフォームURLが未設定です。HTML下部の GOOGLE_FORM_URL にURLを設定してください。');
           });
         }
+      });
+
+
+      document.querySelectorAll('a[href="#top"]').forEach(link=>{
+        link.addEventListener('click',(e)=>{
+          e.preventDefault();
+          window.scrollTo({top:0,behavior:'smooth'});
+          history.replaceState(null,'',location.pathname + location.search);
+        });
       });
 
       const revealItems = document.querySelectorAll('.reveal');
