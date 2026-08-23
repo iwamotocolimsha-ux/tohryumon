@@ -188,14 +188,14 @@
     .speaker-message{background:linear-gradient(135deg,#FFF8E8,#FFFFFF);border:1px solid rgba(216,167,61,.35);border-radius:20px;padding:18px;position:relative;color:#3F4E5E;font-weight:700}
     .speaker-message::before{content:"参加予定者へ";display:inline-flex;margin-bottom:8px;font-size:.78rem;font-weight:900;color:#805A14;background:rgba(216,167,61,.16);border-radius:999px;padding:3px 10px}
     .speaker-message p{margin:0;color:#3F4E5E}
-    .google-banner{background:linear-gradient(135deg,var(--navy),var(--blue));border-radius:34px;box-shadow:var(--shadow);overflow:hidden;color:#fff;position:relative}
-    .google-banner::before{content:"";position:absolute;inset:-20%;background:radial-gradient(circle at 18% 20%,rgba(216,167,61,.34),transparent 24%),radial-gradient(circle at 82% 68%,rgba(255,255,255,.18),transparent 26%);pointer-events:none}
+    .google-banner{margin-top:24px;background:linear-gradient(135deg,#fff 0%,#F8FBFF 100%);border:1px solid rgba(19,92,139,.18);border-radius:34px;box-shadow:var(--shadow-soft);overflow:hidden;color:var(--ink);position:relative}
+    .google-banner::before{content:"";position:absolute;inset:-20%;background:radial-gradient(circle at 18% 20%,rgba(216,167,61,.16),transparent 24%),radial-gradient(circle at 82% 68%,rgba(19,92,139,.10),transparent 26%);pointer-events:none}
     .google-banner-inner{position:relative;display:grid;grid-template-columns:1.08fr .92fr;gap:30px;align-items:center;padding:44px}
-    .google-banner h2{color:#fff}
-    .google-banner p{color:rgba(255,255,255,.84);margin-top:14px}
+    .google-banner h2{color:var(--deep)}
+    .google-banner p{color:#526476;margin-top:14px}
     .google-points{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}
-    .google-point{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.18);border-radius:18px;padding:14px;font-weight:900;color:#fff;text-align:center}
-    .google-card{background:#fff;color:var(--ink);border-radius:26px;padding:26px;box-shadow:0 20px 50px rgba(0,0,0,.18);display:grid;gap:18px}
+    .google-point{background:rgba(19,92,139,.08);border:1px solid rgba(19,92,139,.14);border-radius:18px;padding:14px;font-weight:900;color:var(--navy);text-align:center}
+    .google-card{background:#fff;color:var(--ink);border:1px solid var(--line);border-radius:26px;padding:26px;box-shadow:var(--shadow-soft);display:grid;gap:18px}
     .google-card h3{color:var(--deep)}
     .qr-placeholder{width:132px;height:132px;border-radius:18px;background:linear-gradient(135deg,#fff,#F4F7FB);border:1px dashed #B7C4D4;display:grid;place-items:center;color:var(--muted);font-weight:900;margin-inline:auto;text-align:center;line-height:1.35}
     .qr-image-wrap {
@@ -217,10 +217,13 @@
     .curriculum-note{display:flex;align-items:flex-start;gap:14px;background:#fff;border:1px solid rgba(216,167,61,.42);border-radius:22px;padding:18px 20px;box-shadow:var(--shadow-soft);margin:-12px 0 26px}
     .curriculum-note strong{flex:0 0 auto;display:inline-flex;align-items:center;border-radius:999px;background:rgba(216,167,61,.16);color:#805A14;font-size:.86rem;font-weight:900;padding:5px 12px}
     .curriculum-note span{color:#405166;font-weight:700;line-height:1.7}
-    .member-support-banner{margin-top:24px;background:#fff;border:1px solid var(--line);border-radius:28px;padding:26px;box-shadow:var(--shadow-soft);display:grid;grid-template-columns:1fr auto;gap:22px;align-items:center}
-    .member-support-banner h3{margin-top:8px}
-    .member-support-banner p{color:#526476;margin-top:8px;font-weight:700}
-    .member-support-label{display:inline-flex;align-items:center;border-radius:999px;background:rgba(19,92,139,.10);color:var(--navy);font-size:.82rem;font-weight:900;padding:5px 12px}
+    .member-support-banner{background:linear-gradient(135deg,var(--navy),#143D61 58%,var(--blue));border:1px solid rgba(255,255,255,.16);border-radius:34px;padding:34px;box-shadow:var(--shadow);display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;color:#fff;position:relative;overflow:hidden}
+    .member-support-banner::before{content:"";position:absolute;inset:-25%;background:radial-gradient(circle at 18% 20%,rgba(216,167,61,.34),transparent 24%),radial-gradient(circle at 85% 72%,rgba(255,255,255,.16),transparent 28%);pointer-events:none}
+    .member-support-banner>*{position:relative;z-index:1}
+    .member-support-banner h3{margin-top:10px;color:#fff;font-size:1.45rem;line-height:1.45}
+    .member-support-banner p{color:rgba(255,255,255,.86);margin-top:10px;font-weight:700}
+    .member-support-banner .btn.dark{background:#fff;color:var(--navy);box-shadow:0 14px 30px rgba(0,0,0,.16)}
+    .member-support-label{display:inline-flex;align-items:center;border-radius:999px;background:rgba(216,167,61,.20);border:1px solid rgba(255,255,255,.20);color:#fff;font-size:.82rem;font-weight:900;padding:5px 12px}
 
     @media (max-width:980px){
       :root{--header:68px}.nav{display:none}.header-inner{gap:12px}.brand{min-width:0}.brand-text span{display:none}.hero{padding:46px 0 64px}.hero-grid,.about-panel,.program,.form-wrap,.final-cta-inner,.speaker-grid,.google-banner-inner{grid-template-columns:1fr}.visual-card{min-height:440px;order:-1}.info-strip{grid-template-columns:repeat(2,1fr)}.grid.cols-3,.grid.cols-4{grid-template-columns:repeat(2,1fr)}.google-points{grid-template-columns:1fr}.member-support-banner{grid-template-columns:1fr}.form-side{position:relative;top:auto}.final-cta{text-align:center}.footer-grid{grid-template-columns:1fr}.mobile-cta{display:block}body{padding-bottom:72px}.form-grid{grid-template-columns:1fr}.section{padding:76px 0}.overview{grid-template-columns:1fr}.hero-actions .btn{flex:1 1 220px}.container{width:min(var(--max),calc(100% - 28px))}
@@ -504,12 +507,21 @@
 
     <section class="section" id="entry">
       <div class="container">
+        <div class="member-support-banner reveal">
+          <div>
+            <span class="member-support-label">新入会員・既存会員の方へ</span>
+            <h3>小松YEG新入会員ならびに既存会員の参加申込は、会員サポートから。</h3>
+            <p>小松YEGの新入会員や、YEGを学び直したい既存会員は、Googleフォームではなく会員サポートからお申し込みください。</p>
+          </div>
+          <a class="btn dark" href="#" data-member-support>会員サポートを開く</a>
+        </div>
+
         <div class="google-banner reveal">
           <div class="google-banner-inner">
             <div>
               <span class="eyebrow">ENTRY</span>
-              <h2>小松YEG非会員（入会検討者）の参加希望は、Googleフォームから。</h2>
-              <p class="lead">小松YEG非会員（入会検討者）の参加希望は、Googleフォームで受け付けます。詳細案内は、担当者より改めてご連絡します。</p>
+              <h2>入会検討者の参加希望は、Googleフォームから。</h2>
+              <p class="lead">小松YEGへの入会を検討している方の参加希望は、Googleフォームで受け付けます。詳細案内は、担当者より改めてご連絡します。</p>
               <div class="google-points" aria-label="フォームの特徴">
                 <div class="google-point">入力目安 約3分</div>
                 <div class="google-point">スマホ対応</div>
@@ -518,7 +530,7 @@
             </div>
             <div class="google-card">
               <div>
-                <h3>小松YEG非会員（入会検討者） 参加希望フォーム</h3>
+                <h3>入会検討者 参加希望フォーム</h3>
                 <p>氏名、会社名、連絡先を入力してください。</p>
               </div>
               <div class="qr-placeholder qr-image-wrap">
@@ -529,16 +541,7 @@
             </div>
           </div>
         </div>
-        <div class="member-support-banner reveal">
-          <div>
-            <span class="member-support-label">新入会員・既存会員の方へ</span>
-            <h3>小松YEG新入会員ならびに既存会員の参加申込は、会員サポートから。</h3>
-            <p>新入会員やYEGを学び直したい既存会員は、Googleフォームではなく会員サポートからお申し込みください。</p>
-          </div>
-          <a class="btn dark" href="#" data-member-support>会員サポートを開く</a>
-        </div>
       </div>
-        
     </section>
     <section class="section">
       <div class="container">
