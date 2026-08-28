@@ -170,6 +170,13 @@
     .timeline{position:relative;display:grid;gap:18px}.timeline::before{content:"";position:absolute;left:26px;top:20px;bottom:20px;width:3px;background:linear-gradient(var(--gold),var(--blue));border-radius:99px}.time-item{position:relative;display:grid;grid-template-columns:70px 1fr;gap:20px;align-items:stretch}.time-dot{width:56px;height:56px;border-radius:20px;background:#fff;border:3px solid var(--gold);box-shadow:var(--shadow-soft);display:grid;place-items:center;font-weight:900;color:var(--navy);z-index:1}.time-body{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:var(--shadow-soft)}.time-body small{display:inline-flex;color:#805A14;background:rgba(216,167,61,.14);border-radius:999px;padding:3px 10px;font-weight:900;margin-bottom:8px}.time-body p{color:#526476;margin-top:8px}
     .program{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}.program-visual{min-height:420px;border-radius:34px;background:linear-gradient(135deg,#fff,var(--cream));border:1px solid var(--line);box-shadow:var(--shadow);position:relative;overflow:hidden}.program-visual::before{content:"";position:absolute;inset:42px;border-radius:30px;border:2px dashed rgba(19,92,139,.24)}.plan-doc{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-3deg);width:280px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 20px 50px rgba(15,45,74,.18)}.plan-doc .line{height:12px;border-radius:99px;background:#DDE5EF;margin:12px 0}.plan-doc .line.w1{width:90%;background:var(--navy)}.plan-doc .line.w2{width:65%;background:var(--gold)}.plan-doc .line.w3{width:78%}.plan-doc .mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}.plan-doc .mini-grid div{height:52px;border-radius:12px;background:var(--soft)}.award{position:absolute;right:50px;bottom:54px;width:94px;height:94px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--orange));display:grid;place-items:center;color:#fff;font-size:2rem;box-shadow:0 18px 38px rgba(216,167,61,.35)}
     .overview{display:grid;grid-template-columns:1fr 1fr;gap:18px}.overview-item{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px}.overview-item small{display:block;font-weight:900;color:var(--muted);font-size:.78rem;margin-bottom:4px}.overview-item strong{font-size:1.04rem;color:var(--deep)}
+    .map-card{margin-top:24px;background:#fff;border:1px solid var(--line);border-radius:28px;overflow:hidden;box-shadow:var(--shadow-soft)}
+    .map-card-head{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 26px;background:linear-gradient(135deg,#fff 0%,#F8FBFF 100%);border-bottom:1px solid var(--line)}
+    .map-card-head h3{font-size:1.35rem}
+    .map-card-head p{color:#526476;margin-top:6px;font-weight:700}
+    .map-frame{height:min(52vw,420px);min-height:280px;background:var(--soft)}
+    .map-frame iframe{width:100%;height:100%;border:0;display:block}
+
     .faq-list{display:grid;gap:12px}.faq{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow-soft);overflow:hidden}.faq summary{list-style:none;cursor:pointer;padding:20px 58px 20px 22px;font-weight:900;color:var(--deep);position:relative}.faq summary::-webkit-details-marker{display:none}.faq summary::after{content:"＋";position:absolute;right:22px;top:50%;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--soft);color:var(--navy)}.faq[open] summary::after{content:"−";background:var(--navy);color:#fff}.faq p{padding:0 22px 22px;color:#526476}
     .form-wrap{display:grid;grid-template-columns:.86fr 1.14fr;gap:30px;align-items:start}.form-side{position:sticky;top:100px;background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;border-radius:30px;padding:34px;box-shadow:var(--shadow);overflow:hidden}.form-side::after{content:"";position:absolute;right:-80px;bottom:-100px;width:240px;height:240px;border-radius:50%;background:rgba(216,167,61,.24)}.form-side h2{color:#fff}.form-side p{color:rgba(255,255,255,.82);margin-top:16px}.form-side ul{margin:22px 0 0;padding:0;list-style:none;display:grid;gap:12px}.form-side li{display:flex;gap:10px;align-items:flex-start;color:rgba(255,255,255,.88);font-weight:700}.form-side li::before{content:"✓";flex:0 0 22px;width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.16);display:grid;place-items:center;color:#fff;font-size:.78rem;margin-top:2px}
     form{background:#fff;border:1px solid var(--line);border-radius:30px;padding:30px;box-shadow:var(--shadow)}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.field{display:grid;gap:8px}.field.full{grid-column:1/-1}.label-row{display:flex;align-items:center;justify-content:space-between;gap:12px}.label-row label,.field>label{font-weight:900;color:var(--deep)}.req,.opt{font-size:.74rem;border-radius:999px;padding:3px 8px;font-weight:900}.req{background:#FFF1F0;color:var(--error)}.opt{background:var(--soft);color:var(--muted)}input,select,textarea{width:100%;border:1px solid #C9D4E3;border-radius:14px;padding:13px 14px;font:inherit;color:var(--ink);background:#fff;min-height:48px}textarea{min-height:116px;resize:vertical}.checks{display:grid;gap:10px}.radio-row,.check-row{display:flex;align-items:flex-start;gap:10px;border:1px solid var(--line);border-radius:14px;padding:13px 14px;background:#fff;cursor:pointer;min-height:48px}.radio-row input,.check-row input{width:auto;min-height:auto;margin-top:5px}.radio-row:has(input:checked),.check-row:has(input:checked){border-color:var(--gold);background:#FFF9EB;box-shadow:0 0 0 3px rgba(216,167,61,.14)}.error-text{display:none;color:var(--error);font-size:.84rem;font-weight:800}.field.invalid .error-text{display:block}.field.invalid input,.field.invalid select,.field.invalid textarea{border-color:var(--error);box-shadow:0 0 0 3px rgba(180,35,24,.10)}.privacy{background:var(--soft);border-radius:18px;padding:16px}.success{display:none;background:linear-gradient(135deg,#EAF8F1,#FFFFFF);border:1px solid #A7E2C1;border-radius:24px;padding:28px;box-shadow:var(--shadow-soft);color:var(--success)}.success.show{display:block}.success strong{display:block;font-size:1.4rem;line-height:1.4;margin-bottom:8px}.form-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:24px}.form-actions small{color:var(--muted);font-weight:700}
@@ -226,6 +233,7 @@
     .member-support-label{display:inline-flex;align-items:center;border-radius:999px;background:rgba(216,167,61,.20);border:1px solid rgba(255,255,255,.20);color:#fff;font-size:.82rem;font-weight:900;padding:5px 12px}
 
     @media (max-width:980px){
+      .map-card-head{display:grid}.map-card-head .btn{width:100%}
       :root{--header:68px}.nav{display:none}.header-inner{gap:12px}.brand{min-width:0}.brand-text span{display:none}.hero{padding:46px 0 64px}.hero-grid,.about-panel,.program,.form-wrap,.final-cta-inner,.speaker-grid,.google-banner-inner{grid-template-columns:1fr}.visual-card{min-height:440px;order:-1}.info-strip{grid-template-columns:repeat(2,1fr)}.grid.cols-3,.grid.cols-4{grid-template-columns:repeat(2,1fr)}.google-points{grid-template-columns:1fr}.member-support-banner{grid-template-columns:1fr}.form-side{position:relative;top:auto}.final-cta{text-align:center}.footer-grid{grid-template-columns:1fr}.mobile-cta{display:block}body{padding-bottom:72px}.form-grid{grid-template-columns:1fr}.section{padding:76px 0}.overview{grid-template-columns:1fr}.hero-actions .btn{flex:1 1 220px}.container{width:min(var(--max),calc(100% - 28px))}
     }
     @media (max-width:640px){
@@ -272,7 +280,7 @@
             <div class="info-item"><small>事業名</small><strong>小松YEG登竜門</strong></div>
             <div class="info-item"><small>対象</small><strong>新入会員、入会検討者、学び直したい既存会員</strong></div>
             <div class="info-item"><small>日程</small><strong>全5回</strong></div>
-            <div class="info-item"><small>会場</small><strong>EATLAB ほか</strong></div>
+            <div class="info-item"><small>会場</small><strong>エムラインマーケット2階</strong></div>
           </div>
         </div>
         <div class="visual-card reveal" aria-hidden="true">
@@ -480,8 +488,21 @@
           <div class="overview-item"><small>担当委員会</small><strong>会員交流（登竜門）委員会</strong></div>
           <div class="overview-item"><small>対象者</small><strong>新入会員、入会検討者、学び直したい既存会員</strong></div>
           <div class="overview-item"><small>形式</small><strong>スクール形式及び実践形式</strong></div>
-          <div class="overview-item"><small>会場</small><strong>〒923-0801 石川県小松市園町ハ96-1 T-Place 1F EATLAB ほか</strong></div>
+          <div class="overview-item"><small>会場</small><strong>エムラインマーケット2階</strong></div>
           <div class="overview-item"><small>会費</small><strong>小松YEG会員：無料<br/>小松YEG非会員：無料</strong><br/>※非会員（入会検討者）は第1回～第3回まで参加可能です。</div>
+        </div>
+        <div class="map-card reveal" aria-label="会場地図">
+          <div class="map-card-head">
+            <div>
+              <span class="eyebrow">MAP</span>
+              <h3>会場：エムラインマーケット2階</h3>
+              <p>当日は、Googleマップで場所をご確認のうえお越しください。</p>
+            </div>
+            <a class="btn ghost" href="https://maps.app.goo.gl/tKfBG1mhnNxqppim8" target="_blank" rel="noopener">Googleマップで開く</a>
+          </div>
+          <div class="map-frame">
+            <iframe title="エムラインマーケットのGoogleマップ" src="https://www.google.com/maps?q=%E3%82%A8%E3%83%A0%E3%83%A9%E3%82%A4%E3%83%B3%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%83%E3%83%88&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          </div>
         </div>
       </div>
     </section>
